@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIP RAG Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <main class="workspace-shell">
+    <aside class="info-panel">
+      <div class="brand-card">
+        <p class="eyebrow">SIP Intelligence</p>
+        <h1>SIP Reports Assistant</h1>
+        <p>Grounded answers from your local RAG pipeline, optimized for report analysis.</p>
+      </div>
+
+      <div class="status-card">
+        <p class="card-title">System</p>
+        <p class="status-line"><span class="status-dot"></span>Local chatbot ready</p>
+        <p class="card-subtle">Data source: SIP report chunks + hybrid retrieval</p>
+      </div>
+
+      <div class="prompt-card">
+        <p class="card-title">Try Questions</p>
+        <div class="prompt-list">
+          <button class="prompt-chip" data-prompt="List all company sectors mentioned across the SIP reports." type="button">Company sectors</button>
+          <button class="prompt-chip" data-prompt="List all software, programming languages, and technical tools mentioned." type="button">Tools and languages</button>
+          <button class="prompt-chip" data-prompt="Summarise the key SIP learning outcomes." type="button">Learning outcomes</button>
+        </div>
+      </div>
+    </aside>
+
+    <section class="chat-panel">
+      <header class="chat-header">
+        <div>
+          <h2>Chat</h2>
+          <p>Ask follow-up questions and refine your analysis in real time.</p>
+        </div>
+        <button id="clearButton" class="ghost-button" type="button">Clear Chat</button>
+      </header>
+
+      <section id="chatWindow" class="chat-window" aria-live="polite"></section>
+
+      <form id="chatForm" class="chat-form">
+        <label for="questionInput" class="sr-only">Ask a question</label>
+        <textarea id="questionInput" rows="2" placeholder="Ask anything about company sectors, tools, learning outcomes..." required></textarea>
+        <div class="form-actions">
+          <p class="input-tip">Shift+Enter for newline</p>
+          <button id="sendButton" type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <template id="messageTemplate">
+    <article class="message">
+      <p class="message-meta"></p>
+      <p class="message-text"></p>
+    </article>
+  </template>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

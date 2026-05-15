@@ -1,0 +1,7 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "normalize_embeddings": true,
+  "metric": "cosine",
+  "chunk_count": 319,
+  "cache_folder": "rag_assets\\hf_cache"
+}

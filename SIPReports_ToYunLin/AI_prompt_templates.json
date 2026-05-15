@@ -1,0 +1,6 @@
+{
+  "sentiment_analysis": "Analyze the sentiment of this SIP report. \nReport: {full_text}\n\nProvide:\n1. Overall sentiment (Positive/Neutral/Negative)\n2. Key emotional indicators\n3. Challenges mentioned\n4. Growth areas highlighted",
+  "skill_extraction": "Extract all technical and professional skills mentioned in this report.\nReport: {full_text}\n\nProvide:\n1. Technical skills (programming languages, tools, platforms)\n2. Professional skills (communication, teamwork, leadership)\n3. Soft skills developed\n4. Skills gaps identified",
+  "company_analysis": "Analyze the company/organization described in this report.\nReport: {full_text}\n\nProvide:\n1. Company industry and size\n2. Key technologies used\n3. Company culture observations\n4. Organizational structure insights",
+  "learning_outcomes": "Summarize the learning outcomes from this internship report.\nReport: {full_text}\n\nProvide:\n1. Major learnings\n2. Personal growth areas\n3. Applied knowledge\n4. Future career implications"
+}
